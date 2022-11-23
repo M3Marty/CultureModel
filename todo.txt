@@ -1,0 +1,35 @@
+map modes:
+trade			x
+agro culture	x
+fertile			x
+culture			x
+religion		x
+resource		x
+population		x
+production		x
+political		x
+terrain			x
+administration	x
+infrastructure	x
+diplomatic		x
+technology		x
+institution		x
+climate			x
+temperature		x
+cities			x
+buildings		x
+government type	x
+opinion			x
+colonial		x
+
+organisations	x
+sphere			x
+provinces		x
+person			x
+pollution		x
+imigrations		x
+communications	x
+space			x
+social struct	x
+tourism			x
+epidemic		x

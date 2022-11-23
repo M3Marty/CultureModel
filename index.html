@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EasyStrat</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+	<link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="App">
+		<div id="Field"><div id="OverField"></div></div>
+		<div id="Data">
+			<div id="General-Data">
+				<div id="Time-Data" class="wide-panel">
+					<span id="Date-View">01.01.5000 BC</span>
+					<div id="Time-Control">
+						<span id="Stop" class="button material-icons" onclick="time.setSpeed(0)">pause</span>
+						<span id="Slow" class="button material-icons" onclick="time.setSpeed(1)">keyboard_arrow_right</span>
+						<span id="Norm" class="button material-icons" onclick="time.setSpeed(2)">play_arrow</span>
+						<span id="Fast" class="button material-icons" onclick="time.setSpeed(3)">fast_forward</span>
+						<span id="Most" class="button material-icons" onclick="time.setSpeed(4)">last_page</span>
+					</div>
+				</div>
+				<div id="Map-Modes" class="wide-panel button-field">
+					<span id="Terrain" class="button material-icons-outlined" onclick="modes.setMode( 0)">terrain</span>
+					<span id="Politic" class="button material-icons-outlined" onclick="modes.setMode( 1)">flag</span>
+					<span id="Population" class="button material-icons-outlined" onclick="modes.setMode( 2)">people</span>
+					<span id="Production" class="button material-icons-outlined" onclick="modes.setMode( 3)">factory</span>
+					<span id="Trade" class="button material-icons-outlined" onclick="modes.setMode( 4)">widgets</span>
+					<span id="Resource" class="button material-icons-outlined" onclick="modes.setMode( 5)">scatter_plot</span>
+					<span id="Agriculture" class="button material-icons-outlined" onclick="modes.setMode( 6)">grass</span>
+					<span id="Military" class="button material-icons-outlined" onclick="modes.setMode( 7)">radar</span>
+					<span id="Diplomatic" class="button material-icons-outlined" onclick="modes.setMode( 8)">handshake</span>
+					<span id="Culture" class="button material-icons-outlined" onclick="modes.setMode( 9)">theater_comedy</span>
+					<span id="Religion" class="button material-icons-outlined" onclick="modes.setMode(10)">church</span>
+
+					<span id="AdminControl" class="button material-icons-outlined" onclick="modes.setMode(11)">gavel</span>
+					<span id="Groundwork" class="button material-icons-outlined" onclick="modes.setMode(12)">train</span>
+					<span id="Cities" class="button material-icons-outlined" onclick="modes.setMode(13)">domain</span>
+					<span id="Buildings" class="button material-icons-outlined" onclick="modes.setMode(14)">gite</span>
+					<span id="IdeaSpread" class="button material-icons-outlined" onclick="modes.setMode(15)">menu_book</span>
+					<span id="Technology" class="button material-icons-outlined" onclick="modes.setMode(16)">settings</span>
+					<span id="Fertilized" class="button material-icons-outlined" onclick="modes.setMode(17)">agriculture</span>
+					<span id="Government" class="button material-icons-outlined" onclick="modes.setMode(18)">assured_workload</span>
+					<span id="Climate" class="button material-icons-outlined" onclick="modes.setMode(19)">ac_unit</span>
+					<span id="Temperature" class="button material-icons-outlined" onclick="modes.setMode(20)">device_thermostat</span>
+					<span id="Overseas" class="button material-icons-outlined" onclick="modes.setMode(21)">anchor</span>
+
+					<span id="InternOrg" class="button material-icons-outlined" onclick="modes.setMode(22)">public</span>
+					<span id="Sphere" class="button material-icons-outlined" onclick="modes.setMode(23)">hub</span>
+					<span id="Person" class="button material-icons-outlined" onclick="modes.setMode(24)">person</span>
+					<span id="Provinces" class="button material-icons-outlined" onclick="modes.setMode(25)">pentagon</span>
+					<span id="Space" class="button material-icons-outlined" onclick="modes.setMode(26)">rocket_launch</span>
+					<span id="PipesNAll" class="button material-icons-outlined" onclick="modes.setMode(27)">nat</span>
+					<span id="Pollution" class="button material-icons-outlined" onclick="modes.setMode(28)">co2</span>
+					<span id="SocStruct" class="button material-icons-outlined" onclick="modes.setMode(29)">account_tree</span>
+					<span id="Tourism" class="button material-icons-outlined" onclick="modes.setMode(30)">attractions</span>
+					<span id="Immigrant" class="button material-icons-outlined" onclick="modes.setMode(31)">sync_alt</span>
+					<span id="Epidemic" class="button material-icons-outlined" onclick="modes.setMode(32)">coronavirus</span>
+				</div>
+				<div id="Additional-Map-Modes" class="wide-panel"><h2>Map Modes</h2></div>
+				<div id="Selectable-Elements" class="wide-panel"><h2>Elements</h2></div>
+			</div>
+			<div id="Selected-Data">
+				<div id="Selected-Data-Provience" style="display: none">
+
+				</div>
+				<div id="Selected-Data-Unit" style="display: none">
+
+				</div>
+				<div id="Selected-Data-Building" style="display: none">
+
+				</div>
+				<div id="Selected-Data-Player" style="display: none">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="library/blendcolors.js"></script>
+	<script src="library/incrementor.js"></script>
+	<script src="library/arrayFill.js"></script>
+	<script src="library/colors.js"></script>
+	<script src="library/vec.js"></script>
+
+	<script src="modes/terrainmode.js"></script>
+	<script src="modes/climatemode.js"></script>
+	<script src="modes/temperaturemode.js"></script>
+	<script src="modes/seamode.js"></script>
+
+	<script src="biosphere.js"></script>
+	<script src="time.js"></script>
+	<script src="modes.js"></script>
+
+	<script src="world/world.js"></script>
+	<script src="world/climate.js"></script>
+
+	<script src="index.js"></script>
+
+	<script src="debug.js"></script>
+</body>
+</html>
